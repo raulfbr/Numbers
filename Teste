@@ -1,0 +1,304 @@
+Okay, vamos resolver as questões de 3 a 15 passo a passo.
+
+*03. Fuvest-SP*
+Dada a equação (2 / (x² - 1)) + (1 / (x + 1)) = -1, então
+
+*   **Restrições:** Os denominadores não podem ser zero.
+    *   x² - 1 ≠ 0 => (x - 1)(x + 1) ≠ 0 => x ≠ 1 e x ≠ -1
+    *   x + 1 ≠ 0 => x ≠ -1
+    *   Portanto, x ≠ 1 e x ≠ -1.
+*   **Resolver a equação:** Fatorar x² - 1 = (x - 1)(x + 1). O Mínimo Múltiplo Comum (MMC) dos denominadores é (x - 1)(x + 1).
+    *   Multiplicar toda a equação pelo MMC:
+        `2 + 1(x - 1) = -1(x - 1)(x + 1)`
+        `2 + x - 1 = -(x² - 1)`
+        `x + 1 = -x² + 1`
+        `x² + x = 0`
+*   **Encontrar as raízes:**
+    *   `x(x + 1) = 0`
+    *   Isso nos dá x = 0 ou x + 1 = 0 => x = -1.
+*   **Verificar as restrições:**
+    *   x = 0 é uma solução válida (não é 1 nem -1).
+    *   x = -1 não é uma solução válida, pois viola a restrição x ≠ -1.
+*   **Conjunto Verdade (V):** O único valor válido é x = 0.
+    *   V = {0}
+
+*   **Resposta:** e. V = {0}
+
+**04. Fuvest-SP**
+Problema sobre compra de produtos A e B.
+
+*   **Variáveis:**
+    *   nA = número de unidades de A
+    *   nB = número de unidades de B
+    *   pA = preço unitário de A
+    *   pB = preço unitário de B
+*   **Equações:**
+    1.  `nA * pA = 960`
+    2.  `nB * pB = 840`
+    3.  `nA + nB = 26` => `nB = 26 - nA`
+    4.  `pA = pB + 20` => `pB = pA - 20`
+*   **Objetivo:** Encontrar nA.
+*   **Substituir na equação 2:**
+    *   `(26 - nA) * (pA - 20) = 840`
+*   **Substituir pA da equação 1:** `pA = 960 / nA`
+    *   `(26 - nA) * (960 / nA - 20) = 840`
+*   **Resolver para nA:**
+    *   `(26 - nA) * [(960 - 20nA) / nA] = 840`
+    *   `(26 - nA) * (960 - 20nA) = 840nA`
+    *   `24960 - 520nA - 960nA + 20nA² = 840nA`
+    *   `20nA² - 1480nA + 24960 = 840nA`
+    *   `20nA² - 2320nA + 24960 = 0`
+    *   Dividir por 20: `nA² - 116nA + 1248 = 0`
+*   **Resolver a equação quadrática:** Usar a fórmula de Bhaskara ou tentar fatorar/testar opções.
+    *   Δ = b² - 4ac = (-116)² - 4 * 1 * 1248 = 13456 - 4992 = 8464
+    *   √Δ = √8464 = 92
+    *   nA = [-(-116) ± 92] / (2 * 1) = (116 ± 92) / 2
+    *   nA' = (116 + 92) / 2 = 208 / 2 = 104
+    *   nA'' = (116 - 92) / 2 = 24 / 2 = 12
+*   **Verificar as soluções:**
+    *   Se nA = 104, então nB = 26 - 104 = -78. Impossível (número de unidades não pode ser negativo).
+    *   Se nA = 12, então nB = 26 - 12 = 14. Possível.
+        *   Verificar preços: pA = 960 / 12 = R$ 80. pB = 840 / 14 = R$ 60.
+        *   Verificar condição de preço: pA = pB + 20 => 80 = 60 + 20. Correto.
+*   **Resposta:** b. 12
+
+**05. Unifor-CE**
+Relações de Girard (Vieta's Formulas).
+
+*   **Equação original:** 2x² - 3x - 2 = 0, raízes a e b.
+    *   Soma das raízes: a + b = -(-3) / 2 = 3/2
+    *   Produto das raízes: a * b = -2 / 2 = -1
+*   **Nova equação:** Raízes A = a + 1 e B = b + 1.
+    *   Soma das novas raízes: A + B = (a + 1) + (b + 1) = (a + b) + 2 = (3/2) + 2 = 7/2
+    *   Produto das novas raízes: A * B = (a + 1)(b + 1) = ab + a + b + 1 = (-1) + (3/2) + 1 = 3/2
+*   **Formar a nova equação:** `x² - (Soma)x + (Produto) = 0`
+    *   `x² - (7/2)x + (3/2) = 0`
+*   **Multiplicar por 2 para eliminar frações:**
+    *   `2x² - 7x + 3 = 0`
+
+*   **Resposta:** a. 2x² - 7x + 3 = 0
+
+**06. UFSCar-SP**
+Relações de Girard.
+
+*   **Equação:** x² + kx + 36 = 0, raízes x' e x''.
+    *   Soma das raízes: x' + x'' = -k / 1 = -k
+    *   Produto das raízes: x' * x'' = 36 / 1 = 36
+*   **Relação dada:** (1 / x') + (1 / x'') = 5 / 12
+*   **Simplificar a relação:**
+    *   (x'' + x') / (x' * x'') = 5 / 12
+*   **Substituir as relações de Girard:**
+    *   (-k) / 36 = 5 / 12
+*   **Resolver para k:**
+    *   -k = (5 / 12) * 36
+    *   -k = 5 * 3
+    *   -k = 15
+    *   k = -15
+
+*   **Resposta:** a. -15
+
+**07.**
+Problema de contagem (presentes).
+
+*   **Variáveis:** n = número de aniversariantes.
+*   **Lógica:** Cada um dos 'n' aniversariantes dá presente para os outros 'n-1' aniversariantes.
+*   **Total de presentes:** n * (n - 1)
+*   **Equação:** n * (n - 1) = 156
+*   **Resolver a equação:**
+    *   n² - n - 156 = 0
+*   **Resolver a equação quadrática:** Procurar dois números que multiplicam para -156 e somam -1. Fatores de 156: (12, 13). Usar -13 e 12.
+    *   (n - 13)(n + 12) = 0
+    *   Soluções: n = 13 ou n = -12.
+*   **Validar:** O número de pessoas (n) deve ser positivo. Portanto, n = 13.
+*   **Analisar n = 13:**
+    *   13 é ímpar.
+    *   Comparar com as opções:
+        *   a. par e menor que 11 (Não)
+        *   b. par e maior que 11 (Não)
+        *   c. ímpar e menor que 13 (Não, é igual)
+        *   d. ímpar e maior que 13 (Não, é igual)
+        *   e. 13 (Sim)
+
+*   **Resposta:** e. 13
+
+**08. Fuvest-SP**
+Números inteiros consecutivos.
+
+*   **Representação:** Três inteiros consecutivos: n-1, n, n+1.
+*   **Condição:** Soma = Produto
+    *   (n - 1) + n + (n + 1) = (n - 1) * n * (n + 1)
+*   **Simplificar:**
+    *   3n = n * (n² - 1)
+*   **Resolver a equação:**
+    *   `n(n² - 1) - 3n = 0`
+    *   `n [ (n² - 1) - 3 ] = 0`
+    *   `n (n² - 4) = 0`
+    *   `n (n - 2)(n + 2) = 0`
+*   **Possíveis valores para n:** n = 0, n = 2, n = -2.
+*   **Encontrar os conjuntos:**
+    *   Se n = 0: Conjunto é {-1, 0, 1}. (Soma=0, Produto=0)
+    *   Se n = 2: Conjunto é {1, 2, 3}. (Soma=6, Produto=6)
+    *   Se n = -2: Conjunto é {-3, -2, -1}. (Soma=-6, Produto=-6)
+
+*   **Resposta:** Os conjuntos são {-1, 0, 1}, {1, 2, 3} e {-3, -2, -1}.
+
+**09.**
+Aplicação de equação quadrática e Vieta.
+
+*   **Equação dada:** √3x² + 3x - √2 = 0. Raízes r e s.
+*   **Soma das raízes (Vieta):** r + s = -B / A = -3 / √3
+    *   Rationalizando: r + s = (-3 / √3) * (√3 / √3) = -3√3 / 3 = -√3
+*   **Expressão a calcular:** [r + s + 1] / (r + s - 1)
+*   **Substituir r + s:**
+    *   [-√3 + 1] / [-√3 - 1]
+*   **Simplificar:** Multiplicar numerador e denominador pelo conjugado do denominador (1 - √3):
+    *   Numerador: (1 - √3)(1 - √3) = (1 - √3)² = 1 - 2√3 + 3 = 4 - 2√3
+    *   Denominador: (-√3 - 1)(1 - √3) = -(√3 + 1)(1 - √3) = -(1 - 3) = -(-2) = 2
+    *   Valor = (4 - 2√3) / 2 = 2 - √3
+*   **Comparar com as opções:**
+    *   2 - √3 ≈ 2 - 1.732 = 0.268
+    *   a. 2/7 ≈ 0.286
+    *   b. 3/7 ≈ 0.429
+    *   c. 9/7 ≈ 1.286
+    *   d. 4/7 ≈ 0.571
+    *   e. 2
+*   **Conclusão:** O valor calculado (2 - √3) não corresponde exatamente a nenhuma opção, mas 2/7 é o mais próximo numericamente. Há uma possível inconsistência na questão ou nas opções. Assumindo que a opção (a) é a resposta pretendida por aproximação ou por um erro de digitação na questão original.
+
+*   **Resposta:** a. 2/7 (com ressalva sobre a discrepância)
+
+**10.**
+Problema de idade.
+
+*   **Variáveis:** x = número de anos atrás.
+*   **Idades x anos atrás:**
+    *   Pai: 54 - x
+    *   Filho: 12 - x
+*   **Condição:** Idade do pai = (Idade do filho)²
+    *   54 - x = (12 - x)²
+*   **Resolver a equação:**
+    *   54 - x = 144 - 24x + x²
+    *   x² - 24x + x + 144 - 54 = 0
+    *   x² - 23x + 90 = 0
+*   **Resolver a equação quadrática:** Procurar dois números que multiplicam para 90 e somam -23. Fatores: (-5, -18).
+    *   (x - 5)(x - 18) = 0
+    *   Soluções: x = 5 ou x = 18.
+*   **Validar:**
+    *   Se x = 5: Há 5 anos. Pai tinha 49, Filho tinha 7. 49 = 7². Válido.
+    *   Se x = 18: Há 18 anos. Pai tinha 36, Filho tinha -6. Idade negativa é inválida.
+*   **Resposta:** d. 5
+
+**11.**
+Geometria e área.
+
+*   **Variáveis:** x = lado do quadrado original de papelão.
+*   **Processo:** Quadrados de 2cm de lado são removidos dos cantos.
+*   **Interpretação da Área:** A frase "a caixa ficou com 48 cm² de área" é ambígua.
+    *   **Interpretação 1: Área da base da caixa = 48 cm².**
+        *   O lado da base da caixa é x - 2 - 2 = x - 4.
+        *   Equação: (x - 4)² = 48
+        *   x - 4 = ±√48 = ±4√3
+        *   x = 4 ± 4√3. A solução positiva é x = 4 + 4√3 ≈ 10.93 cm. Não está nas opções.
+    *   **Interpretação 2: Área do papelão restante *após os cortes* = 48 cm².**
+        *   Área original = x²
+        *   Área removida = 4 * (2²) = 16 cm²
+        *   Área restante = Área original - Área removida = x² - 16
+        *   Equação: x² - 16 = 48
+        *   x² = 64
+        *   x = ±8. Como x é um comprimento, x = 8 cm.
+*   **Verificar:** Se x = 8, a área restante é 8² - 16 = 64 - 16 = 48 cm². Esta interpretação corresponde à opção (b).
+
+*   **Resposta:** b. 8 cm
+
+**12.**
+Relações de Girard.
+
+*   **Equação:** 7x² + 9x + 21 = 0, raízes m e n.
+    *   Soma: m + n = -9 / 7
+    *   Produto: m * n = 21 / 7 = 3
+*   **Expressão a calcular:** (m + 7)(n + 7)
+*   **Expandir:**
+    *   mn + 7m + 7n + 49
+    *   mn + 7(m + n) + 49
+*   **Substituir valores de Girard:**
+    *   (3) + 7(-9/7) + 49
+    *   3 - 9 + 49
+    *   -6 + 49 = 43
+
+*   **Resposta:** b. 43
+
+**13. UFMG**
+Equação quadrática com raiz única.
+
+*   **Equação:** (m - 1)x² + 2mx - (m + 1) = 0
+*   **Condição para raiz única:**
+    *   **Caso 1: Coeficiente de x² é zero.**
+        *   m - 1 = 0 => m = 1.
+        *   Se m = 1, a equação fica: 0x² + 2(1)x - (1 + 1) = 0 => 2x - 2 = 0 => x = 1. (Uma única raiz).
+    *   **Caso 2: Equação é quadrática (m ≠ 1) e o discriminante (Δ) é zero.**
+        *   A = m - 1, B = 2m, C = -(m + 1)
+        *   Δ = B² - 4AC = (2m)² - 4(m - 1)[-(m + 1)]
+        *   Δ = 4m² + 4(m - 1)(m + 1)
+        *   Δ = 4m² + 4(m² - 1)
+        *   Δ = 4m² + 4m² - 4 = 8m² - 4
+        *   Para raiz única, Δ = 0: 8m² - 4 = 0 => 8m² = 4 => m² = 1/2
+        *   m = ±√(1/2) = ±(1/√2) = ±√2 / 2.
+*   **Valores possíveis de m:** 1, √2 / 2, -√2 / 2.
+*   **Pedido:** O valor *positivo* de m. Os valores positivos são 1 e √2 / 2.
+*   **Verificar opções:** A opção √2 / 2 está listada (c). A opção 1 não está. Presume-se que a questão busca o valor que torna a equação quadrática com Δ=0.
+
+*   **Resposta:** c. √2 / 2
+
+**14. Unicamp-SP**
+Problema de trabalho (vazão de torneiras).
+
+*   **Taxas (Vazão):**
+    *   Torneira 1 (T1): Enche 1 tanque em 12 min. Taxa R1 = 1/12 tanque/min.
+    *   Torneira 2 (T2): Enche 1 tanque em 18 min. Taxa R2 = 1/18 tanque/min.
+*   **Processo:**
+    *   T1 aberta por x minutos. Volume V1 = R1 * x = x / 12.
+    *   T2 aberta por (x + 3) minutos. Volume V2 = R2 * (x + 3) = (x + 3) / 18.
+    *   Volume total = V1 + V2 = 1 tanque.
+*   **Equação:** (x / 12) + ((x + 3) / 18) = 1
+*   **Resolver para x:** MMC(12, 18) = 36.
+    *   Multiplicar por 36: 3x + 2(x + 3) = 36
+    *   3x + 2x + 6 = 36
+    *   5x = 30
+    *   x = 6 minutos.
+*   **Tempo total para encher o tanque:**
+    *   Tempo T1 = x = 6 min.
+    *   Tempo T2 = x + 3 = 9 min.
+    *   Tempo total = Tempo T1 + Tempo T2 = 6 + 9 = 15 minutos.
+
+*   **Resposta:** 15 minutos.
+
+**15.**
+Problema de trabalho (pintura).
+
+*   **Variáveis:**
+    *   tA = tempo (min) para A pintar 1 m².
+    *   tB = tempo (min) para B pintar 1 m².
+*   **Informações:**
+    *   |tA - tB| = 1 min. Assumir tB = tA + 1 (A é mais rápido).
+    *   Taxa de A: RA = 1/tA m²/min.
+    *   Taxa de B: RB = 1/tB = 1/(tA + 1) m²/min.
+    *   Taxa combinada: RC = 27 m²/hora = 27 m² / 60 min = 9/20 m²/min.
+*   **Equação:** RA + RB = RC
+    *   (1 / tA) + (1 / (tA + 1)) = 9 / 20
+*   **Resolver para tA:**
+    *   [(tA + 1) + tA] / [tA(tA + 1)] = 9 / 20
+    *   (2tA + 1) / (tA² + tA) = 9 / 20
+    *   20(2tA + 1) = 9(tA² + tA)
+    *   40tA + 20 = 9tA² + 9tA
+    *   9tA² - 31tA - 20 = 0
+*   **Resolver a equação quadrática:**
+    *   Δ = (-31)² - 4(9)(-20) = 961 + 720 = 1681
+    *   √Δ = 41
+    *   tA = [ -(-31) ± 41 ] / (2 * 9) = (31 ± 41) / 18
+    *   tA' = (31 + 41) / 18 = 72 / 18 = 4
+    *   tA'' = (31 - 41) / 18 = -10 / 18 (Inválido, tempo > 0)
+*   **Encontrar tB:**
+    *   tA = 4 minutos.
+    *   tB = tA + 1 = 4 + 1 = 5 minutos.
+*   **Verificar:** Se tA=4 e tB=5, a diferença é 1 min. Taxas: RA=1/4, RB=1/5. RA+RB = 1/4 + 1/5 = 5/20 + 4/20 = 9/20 m²/min. Correto.
+
+*   **Resposta:** Uma pessoa leva 4 minutos para pintar 1 m² e a outra leva 5 minutos.
